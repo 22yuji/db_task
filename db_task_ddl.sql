@@ -57,7 +57,6 @@ CREATE TABLE detail
     goods_id int references goods(goods_id),
     buy_quan decimal not null,
     discount decimal,
-    amount decimal,
     payment_id int not null references payment(payment_id),
     slip_number varchar(30)
 );

@@ -53,9 +53,8 @@
 |3|商品ID|goods_id|int|
 |4|購入個数|buy_quan|decimal|
 |5|値引き額|discount|decimal|
-|6|合計|amount|decimal|
-|7|従業員ID|emp_id|int||〇|
-|8|伝票番号|slip_number|varchar(30)|
+|6|従業員ID|emp_id|int||〇|
+|7|伝票番号|slip_number|varchar(30)|
 
 ## 6.支払方法テーブル
 |No.|論理名|物理名|型|制約|NotNull|
