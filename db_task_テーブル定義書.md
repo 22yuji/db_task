@@ -35,7 +35,7 @@
 |3|単価|goods_price|decimal||〇|
 |4|税率ID|tax_id|varchar(20)||
 
-## 4.商品テーブル
+## 4.レシートテーブル
 |No.|論理名|物理名|型|制約|NotNull|
 |:--:|:--|:--|:--|:--|:--:|
 |1|レシートID|receipt_id|int|pk|
@@ -45,3 +45,26 @@
 |5|レジ番号|register_no|int|
 |6|従業員ID|emp_id|int||〇|
 
+## 5.レシート明細テーブル
+|No.|論理名|物理名|型|制約|NotNull|
+|:--:|:--|:--|:--|:--|:--:|
+|1|明細ID|detail_id|int|pk|
+|2|レシートID|receipt_id|int||〇|
+|3|商品ID|goods_id|int|
+|4|購入個数|buy_quan|decimal|
+|5|値引き額|discount|decimal|
+|6|合計|amount|decimal|
+|7|従業員ID|emp_id|int||〇|
+|8|伝票番号|slip_number|varchar(30)|
+
+## 6.支払方法テーブル
+|No.|論理名|物理名|型|制約|NotNull|
+|:--:|:--|:--|:--|:--|:--:|
+|1|支払方法ID|payment_id|int|pk|
+|2|支払方法名|payment_name|varchar(20)||
+
+## 7.税率テーブル
+|No.|論理名|物理名|型|制約|NotNull|
+|:--:|:--|:--|:--|:--|:--:|
+|1|税率ID|tax_id|int|pk|
+|2|税率|tax_rate|varchar(20)||
